@@ -11,6 +11,7 @@ async function sendMail(event, context) {
   const email = JSON.parse(record.body) ;
   const { subject, body, recipient} = email ;
 
+  // hard code source email.... ideally this can come from configuration
   const params = {
     Source: 'balasreeni@gmail.com',
     Destination: {
